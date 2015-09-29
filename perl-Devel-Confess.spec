@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Confess
 Version  : 0.008000
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.008000.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.008000.tar.gz
 Summary  : 'Include stack traces on all warnings and errors'
