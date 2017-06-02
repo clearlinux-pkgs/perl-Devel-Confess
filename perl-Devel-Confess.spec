@@ -4,9 +4,9 @@
 #
 Name     : perl-Devel-Confess
 Version  : 0.009002
-Release  : 8
-URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009002.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009002.tar.gz
+Release  : 9
+URL      : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009002.tar.gz
+Source0  : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009002.tar.gz
 Summary  : 'Include stack traces on all warnings and errors'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
@@ -30,6 +30,9 @@ doc components for the perl-Devel-Confess package.
 %setup -q -n Devel-Confess-0.009002
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
@@ -43,7 +46,7 @@ fi
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make TEST_VERBOSE=1 test
 
 %install
