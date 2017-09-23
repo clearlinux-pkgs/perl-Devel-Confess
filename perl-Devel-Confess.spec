@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Confess
 Version  : 0.009004
-Release  : 11
+Release  : 12
 URL      : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz
 Source0  : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz
 Summary  : 'Include stack traces on all warnings and errors'
@@ -63,10 +63,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.0/Devel/Confess.pm
-/usr/lib/perl5/site_perl/5.26.0/Devel/Confess/Builtin.pm
-/usr/lib/perl5/site_perl/5.26.0/Devel/Confess/Source.pm
-/usr/lib/perl5/site_perl/5.26.0/Devel/Confess/_Util.pm
+/usr/lib/perl5/site_perl/5.26.1/Devel/Confess.pm
+/usr/lib/perl5/site_perl/5.26.1/Devel/Confess/Builtin.pm
+/usr/lib/perl5/site_perl/5.26.1/Devel/Confess/Source.pm
+/usr/lib/perl5/site_perl/5.26.1/Devel/Confess/_Util.pm
 
 %files doc
 %defattr(-,root,root,-)
