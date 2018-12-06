@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Confess
 Version  : 0.009004
-Release  : 17
+Release  : 18
 URL      : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz
 Source0  : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz
 Summary  : 'Include stack traces on all warnings and errors'
