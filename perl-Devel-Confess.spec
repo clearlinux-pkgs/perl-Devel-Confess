@@ -64,10 +64,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.0/Devel/Confess.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Devel/Confess/Builtin.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Devel/Confess/Source.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Devel/Confess/_Util.pm
+/usr/lib/perl5/vendor_perl/5.28.1Devel/Confess.pm
+/usr/lib/perl5/vendor_perl/5.28.1Devel/Confess/Builtin.pm
+/usr/lib/perl5/vendor_perl/5.28.1Devel/Confess/Source.pm
+/usr/lib/perl5/vendor_perl/5.28.1Devel/Confess/_Util.pm
 
 %files dev
 %defattr(-,root,root,-)
