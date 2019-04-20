@@ -4,7 +4,7 @@
 #
 Name     : perl-Devel-Confess
 Version  : 0.009004
-Release  : 21
+Release  : 22
 URL      : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz
 Source0  : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz
 Summary  : 'Include stack traces on all warnings and errors'
@@ -22,6 +22,7 @@ Use on the command line:
 Summary: dev components for the perl-Devel-Confess package.
 Group: Development
 Provides: perl-Devel-Confess-devel = %{version}-%{release}
+Requires: perl-Devel-Confess = %{version}-%{release}
 
 %description dev
 dev components for the perl-Devel-Confess package.
