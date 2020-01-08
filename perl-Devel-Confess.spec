@@ -4,12 +4,13 @@
 #
 Name     : perl-Devel-Confess
 Version  : 0.009004
-Release  : 24
+Release  : 25
 URL      : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz
 Source0  : https://www.cpan.org/authors/id/H/HA/HAARG/Devel-Confess-0.009004.tar.gz
 Summary  : 'Include stack traces on all warnings and errors'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Devel-Confess-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -28,14 +29,24 @@ Requires: perl-Devel-Confess = %{version}-%{release}
 dev components for the perl-Devel-Confess package.
 
 
+%package perl
+Summary: perl components for the perl-Devel-Confess package.
+Group: Default
+Requires: perl-Devel-Confess = %{version}-%{release}
+
+%description perl
+perl components for the perl-Devel-Confess package.
+
+
 %prep
 %setup -q -n Devel-Confess-0.009004
+cd %{_builddir}/Devel-Confess-0.009004
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -45,7 +56,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -65,12 +76,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Devel/Confess.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Devel/Confess/Builtin.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Devel/Confess/Source.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Devel/Confess/_Util.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Devel::Confess.3
 /usr/share/man/man3/Devel::Confess::Builtin.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Devel/Confess.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Devel/Confess/Builtin.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Devel/Confess/Source.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Devel/Confess/_Util.pm
